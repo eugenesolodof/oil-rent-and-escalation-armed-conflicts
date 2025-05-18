@@ -48,21 +48,20 @@ countries = [
     'Ecuador'
     ] 
 
-# get_next_page() is used to get link on next page
+# get_next_page() для получения ссылки на следующую страницу сайта
 
 def get_next_page(soup):
     url = 'https://www.gem.wiki' + soup.find_all('a', {'title':'Category:Oil and gas extraction'})[1]['href']
-    #encoded_url = urllib.parse.quote(url, safe=':/')
     return url
 
-# get_link() is used to get link on page of oil field
+# get_link() для получения ссылки на страницу с описанием нефтяного месторождения
 def get_link(d):
     url = 'https://www.gem.wiki' + d.find('a')['href']
     encoded_url = urllib.parse.quote(url, safe=':/%&')
     return encoded_url
 
 """
-HERE WE GET LINKS TO ALL PAGES OF SITE
+ПОЛУЧАЕМ ССЫЛКИ НА ВСЕ СТРАНИЦЫ С САЙТА
 """
 
 links = ['https://www.gem.wiki/Category:Oil_and_gas_extraction']
@@ -87,7 +86,7 @@ for i, link in enumerate(links):
         links.append(next_page)
 
 """
-THIS IS WHERE MAIN PART BEGINS
+ПОЛУЧАЕМ ДАННЫЕ С КАЖДОЙ СТРАНИЦЫ САЙТА
 """
 
 tabs = []
