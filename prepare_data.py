@@ -234,7 +234,8 @@ cols_with_replaced_nan = [
 ]
 
 # справочник для перекодировки GWcode в наименования стран
-refer = pd.read_csv('https://correlatesofwar.org/wp-content/uploads/COW-country-codes.csv')
+#refer = pd.read_csv('https://correlatesofwar.org/wp-content/uploads/COW-country-codes.csv') - страница стала недоступной
+refer = pd.read_csv(r'C:\Users\ESolodov\Desktop\mine\df_map\COW country codes.csv')
 refer = refer.iloc[:,1:]
 refer = refer.rename(columns={refer.columns[0]: 'code'})
 refer = refer.drop_duplicates()
