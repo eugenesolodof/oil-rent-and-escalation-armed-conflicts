@@ -135,7 +135,7 @@ conf_for_make_extension_data = {
         'metric_name' :'mie(4)',
         'groupby_cols' : ['ccode1','year'],
         'side_cols' : None,
-        'level_filter' : 2,
+        'level_filter' : 4,
         'date_cols' : None
     }, 
     'mie(2)_against' : {
@@ -149,7 +149,7 @@ conf_for_make_extension_data = {
         'metric_name' :'mie(4)_against',
         'groupby_cols' : ['ccode2','year'],
         'side_cols' : None,
-        'level_filter' : 2,
+        'level_filter' : 4,
         'date_cols' : None
     }, 
     'miller_a' : {
